@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<!--<link rel="javascript" type="text/js" href="js/main.css">-->
+<script>
+$(buttonShowForm(){
+    document.getElementById("information").style.visibility="visible";
+});
+</script>
+</head>
+<body class="content">
+<header>
+  <h1>Donate</h1>
+  <center>
+  <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
+  <h1 class="bigheader">Donate to the Special Olymics</h1></center>
+</header>
+<section class ="main">
+  <center><button class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
+  <form class="information" name="information" id="information" method="post">
+    Gift Amount<br>
+    <select class="title">
+      <option>5$</option>
+      <option>10$</option>
+      <option>15$</option>
+      <option>Custom</option>
+    </select><br>
+    <table>
+      <tr>
+        Title<br />
+        <select class="title">
+          <option>Mr</option>
+          <option>Miss</option>
+          <option>Mrs</option>
+        </select></p>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div class="first-half">
+             First Name:<br /><input type="text" name="firstname" size="38">
+          </div>
+          <div class="second-half">
+            Last Name:<br /><input type="text" name="lastname" size="38">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">Address: <br /><input type="text" name="address1" size="80"><br />
+          <input type="text" name="address2" size="80"></td>
+      </tr>
+      <tr>
+        <td><div class="first-half">City:<br /><input type="text" name="city"></div>
+        <div class="second-half">State:<br /><input type="text" name="state"></div></td>
+        <td>Zip:<br /><input type="text" name="zip"></td>
+      </tr>
+      <tr>
+        <td>Country:<br /><input type="text" name="country" size="55"></td>
+        <td>Company:<br /><input type="text" name="company" ></td>
+      </tr>
+      <tr>
+        <td>Email:<br /><input type="text" name="Email" size="55"></td>
+        <td>Phone Number:<br /><input type="text" name="phonenumber"></td>
+      </tr>
+    </table>
+    <br><br>
+    <center><input type="submit" name="submitbutton"></button><center>
+</form>
+</section>
+</body>
+</html>
