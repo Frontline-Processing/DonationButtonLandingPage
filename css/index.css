@@ -55,7 +55,11 @@ P.maintitle{
 .information{
   font-size: 18px;
   position:static;
-  visibility: hidden;
+  display: none;
+  color: black;
+  background: white;
+  padding: 12px;
+  position: absolute;
 }
 input{
   font-size: 18px;
@@ -67,4 +71,7 @@ input{
 .second-half {
     float: right;
     width: 50%;
+}
+html{
+  background: url("https://wallpaperscraft.com/image/mountains_landscape_mt_rainier_washington_grass_hdr_90605_2560x1024.jpg");
 }
