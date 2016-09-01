@@ -41,10 +41,11 @@
   padding-right: 16%;
 }
 .main{
-  width: 83.3333333%;
+  width: 25%;
   position:relative;
   margin-left: auto;
   margin-right: auto;
+
 }
 .bigheader{
   font-size: 65px;
@@ -73,5 +74,10 @@ input{
     width: 50%;
 }
 html{
-  background: url("https://wallpaperscraft.com/image/mountains_landscape_mt_rainier_washington_grass_hdr_90605_2560x1024.jpg");
+  background-image: url("../images/backgroundimgMountian.jpg");
+}
+.submit{
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
 }
