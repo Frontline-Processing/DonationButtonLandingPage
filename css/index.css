@@ -58,12 +58,18 @@ P.maintitle{
 }
 .information{
   font-size: 18px;
-  position:static;
+  position:absolute;
   display: none;
   color: black;
   background: white;
   padding: 12px;
   position: absolute;
+}
+.donationAMT{
+  font-size: 72px;
+  color: black;
+  background: white;
+  width: auto;
 }
 input{
   font-size: 18px;
@@ -83,9 +89,26 @@ input{
 }
 html{
   background-image: url("../images/image5.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 header{
   position: absolute;
+}
+.left-right {
+    overflow:hidden;
+    height:200px;
+    width:200px;
+    position:relative;
+    background-color:#333;
+}
+.slider {
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:0;
+    right:-200px;
+    background-color:#000;
+    color:#fff;
 }

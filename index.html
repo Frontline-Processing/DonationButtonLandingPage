@@ -4,16 +4,15 @@
 <!--<link rel="javascript" type="text/js" href="js/main.css">-->
 <script>
 function buttonShowForm(){
-      document.getElementById("information").style.display="block";
-};
+      document.getElementById("information").style.display="block";}
 </script>
 </head>
 <body class="content">
 <header id="banner">
   <table width="100%" class="headertable"><tr>
-    <td><img src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280" align="left"></td>
-    <td><img src="images/FrontlineLogo.png" alt="Frontline Logo" width="240" align="left"></td>
-    <td><img src="images/bobcatlogo.png" alt="BobcatLogoss" width="150"></td>
+    <td><a href="http://www.specialolympics.org/" target=_blank><img src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280" align="left"></a></td>
+    <td><a href="https://www.frontlineprocessing.com/" target=_blank><img src="images/FrontlineLogo.png" alt="Frontline Logo" width="240" align="left"></td>
+    <td><a href="http://www.msubobcats.com/" target=_blank><img src="images/bobcatlogo.png" alt="BobcatLogoss" width="150"></td>
   <tr>
   </table>
 </header>
@@ -23,6 +22,14 @@ function buttonShowForm(){
 <h1 class="bigheader">Support Special Olympics of Montana</h1></center>
 <section class ="main">
   <center><button class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
+  <form class="donationAMT" name="donationAMT" id="donationAMT" method="get">
+    <input type="radio" name="donation" value="500" checked>500$<br>
+    <input type="radio" name="donation" value="250" >250$<br>
+    <input type="radio" name="donation" value="100" >100$<br>
+    <input type="radio" name="donation" value="50" >50$<br>
+    <input type="radio" name="donation" value="25" >25$<br>
+    <input type="radio" name="donation" value="Custom" >Custom<br>
+  </form>
   <form class="information" name="information" id="information" method="post">
     <p>
         <label for='FirstName'>First Name:</label>
@@ -103,7 +110,7 @@ function buttonShowForm(){
         	<option value="180">Congo, the Democratic Republic of the</option>
         	<option value="184">Cook Islands</option>
         	<option value="188">Costa Rica</option>
-        	<option value="384">Côte d'Ivoire</option>
+        	<option value="384">Côte dIvoire</option>
         	<option value="191">Croatia</option>
         	<option value="192">Cuba</option>
         	<option value="531">Curaçao</option>
@@ -166,11 +173,11 @@ function buttonShowForm(){
         	<option value="398">Kazakhstan</option>
         	<option value="404">Kenya</option>
         	<option value="296">Kiribati</option>
-        	<option value="408">Korea, Democratic People's Republic of</option>
+        	<option value="408">Korea, Democratic Peoples Republic of</option>
         	<option value="410">Korea, Republic of</option>
         	<option value="414">Kuwait</option>
         	<option value="417">Kyrgyzstan</option>
-        	<option value="418">Lao People's Democratic Republic</option>
+        	<option value="418">Lao Peoples Democratic Republic</option>
         	<option value="428">Latvia</option>
         	<option value="422">Lebanon</option>
         	<option value="426">Lesotho</option>
@@ -302,6 +309,7 @@ function buttonShowForm(){
         <input type="submit" name="submit" value="Submit" class="submit">
     </p>
     </form>
+    </div>
 </section>
 <footer>
 </footer>
