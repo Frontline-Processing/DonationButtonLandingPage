@@ -51,6 +51,7 @@
   font-size: 65px;
   margin-top: 10%;
   position:relative;
+  color: white;
 }
 P.maintitle{
   font-size: 20px;
@@ -81,7 +82,9 @@ input{
   text-align: center;
 }
 html{
-  background-image: url("../images/backgroundimgMountian.jpg");
+  background-image: url("../images/image5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header{
   position: absolute;
