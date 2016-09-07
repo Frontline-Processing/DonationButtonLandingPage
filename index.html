@@ -5,6 +5,12 @@
 <script>
 function buttonShowForm(){
       document.getElementById("information").style.display="block";}
+function buttonMake() {
+    var x = document.createElement("BUTTON");
+    var t = document.createTextNode("Continue");
+    x.appendChild(t);
+    document.body.appendChild(x);
+}
 </script>
 </head>
 <body class="content">
@@ -22,13 +28,13 @@ function buttonShowForm(){
 <h1 class="bigheader">Support Special Olympics of Montana</h1></center>
 <section class ="main">
   <center><button class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
-  <form class="donationAMT" name="donationAMT" id="donationAMT" method="get">
-    <input type="radio" name="donation" value="500" checked>$5<br>
-    <input type="radio" name="donation" value="250" >$10<br>
-    <input type="radio" name="donation" value="100" >$15<br>
-    <input type="radio" name="donation" value="50" >$25<br>
-    <input type="radio" name="donation" value="25" >$50<br>
-    <input type="radio" name="donation" value="Custom" >Other<br>
+  <form class="donationAMT" name="donationAMT" id="donationAMT" method="get" onsubmit="buttonMake()">
+    <input type="submit" name="donation" value="$5" checked>
+    <input type="submit" name="donation" value="$10" >
+    <input type="submit" name="donation" value="$15" ><br>
+    <input type="submit" name="donation" value="$25" >
+    <input type="submit" name="donation" value="$50" >
+    <input type="submit" name="donation" value="Other" ><br>
   </form>
   <form class="information" name="information" id="information" method="post">
     <p>
