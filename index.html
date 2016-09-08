@@ -4,13 +4,9 @@
 <!--<link rel="javascript" type="text/js" href="js/main.css">-->
 <script>
 function buttonShowForm(){
-      document.getElementById("information").style.display="block";}
-function buttonMake() {
-    var x = document.createElement("BUTTON");
-    var t = document.createTextNode("Continue");
-    x.appendChild(t);
-    document.body.appendChild(x);
-}
+      document.getElementById("donation").style.visibility="visible";
+      document.getElementById("buttonDonate").style.visibility="hidden";
+    }
 </script>
 </head>
 <body class="content">
@@ -28,17 +24,19 @@ function buttonMake() {
 <h1 class="bigheader">Support Special Olympics of Montana</h1></center>
 <div class ="main">
   <div class="buttonPosition">
-    <button class="button" onclick="buttonShowForm()"><span>Donate</span></button>
+    <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
   </div>
-  <form class="donation" name="donationAMT" id="donationAMT" method="get" onsubmit="buttonMake()">
+  <form class="donation" name="donationAMT" id="donation" method="get" onsubmit="buttonMake()">
     <div class="page1">
+        <table class="pagetable" id="pagetable"><tr><th>1</th><th>2</th><th>3</th></tr></table>
         <label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="donation[amount_option]" id="donation_amount_5"><span>$5</span></label>
         <label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="donation[amount_option]" id="donation_amount_10"><span>$10</span></label>
-        <label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="donation[amount_option]" id="donation_amount_15"><span>$15</span></label><br>
+        <label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="donation[amount_option]" id="donation_amount_15"><span>$15</span></label>
         <label for="donation_amount_25" class="radio"><input type="radio" value="25" class="donationAMT" name="donation[amount_option]" id="donation_amount_25"><span>$25</span></label>
         <label for="donation_amount_50" class="radio"><input type="radio" value="50" class="donationAMT" name="donation[amount_option]" id="donation_amount_50"><span>$50</span></label>
-        <label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="donation[amount_option]" id="donation_amount_100"><span>$100</span></label><br>
-        <label for="donation_amount_other">Other $</label><input type="text" placeholder="0.00" class="text" name="donation[amount]" id="donation_amount_other">
+        <label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="donation[amount_option]" id="donation_amount_100"><span>$100</span></label>
+        <br><br>
+        <label for="donation_amount_other">Other $<input type="text" placeholder="0.00" class="text" name="donation[amount]" id="donation_amount_other"></label>
     </div>
     <div class="page2">
       <p>

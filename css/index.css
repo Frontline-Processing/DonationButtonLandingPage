@@ -46,7 +46,7 @@
   padding-right: 16%;
 }
 .main{
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 .bigheader{
@@ -119,11 +119,14 @@ header{
   color: 53B30;
   margin: auto;
   height: 300px;
+  visibility:hidden;
 }
 .page1{
   font-weight: 300;
-  position: absolute;
   background-color: white;
+  margin: auto;
+  width: 50%
+  font-position: center;
 }
 [type="radio"] {
   border: 0;
@@ -140,18 +143,19 @@ header{
   width: 5em;
   height: 1em;
   vertical-align: -0.25em;
-  border-radius: 1em;
+  border-radius: .5em;
   border: 0.125em solid #fff;
   box-shadow: 0 0 0 0.15em #000;
   margin-right: -50%;
   transition: 0.5s ease all;
+  background-color: #1D3665
 }
 [type="radio"]:checked + span::before {
-  background: green;
+  background-color: lightgray;
   box-shadow: 0 0 0 0.25em #000;
 }
 .donationAMT{
-  font-size: 32px;s
+  font-size: 32px;
 }
 .page2{
   display:none;
@@ -173,4 +177,11 @@ label.radio {
 .radio{
   float: left;
   position: relative;
+  padding: 10px;
+}
+.pagetable{
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
 }
