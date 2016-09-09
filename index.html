@@ -7,6 +7,19 @@ function buttonShowForm(){
       document.getElementById("donation").style.visibility="visible";
       document.getElementById("buttonDonate").style.visibility="hidden";
     }
+var page;
+function colorCell(page){
+    var x = document.getElementById("pagetable").getElementsByTagName("td");
+    if (page == page3){
+      x[2].style.backgroundColor = "#1d3665";
+    }
+    else if (page == page2){
+      x[1].style.backgroundColor = "#1d3665";
+    }
+    else {
+      x[0].style.backgroundColor = "#1d3665";
+    }
+}
 </script>
 </head>
 <body class="content">
@@ -27,8 +40,7 @@ function buttonShowForm(){
     <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
   </div>
   <form class="donation" name="donationAMT" id="donation" method="get" onsubmit="buttonMake()">
-    <div class="page1">
-        <table class="pagetable" id="pagetable"><tr><th>1</th><th>2</th><th>3</th></tr></table>
+    <div class="page1" id="page1">
         <label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="donation[amount_option]" id="donation_amount_5"><span>$5</span></label>
         <label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="donation[amount_option]" id="donation_amount_10"><span>$10</span></label>
         <label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="donation[amount_option]" id="donation_amount_15"><span>$15</span></label>
@@ -37,6 +49,7 @@ function buttonShowForm(){
         <label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="donation[amount_option]" id="donation_amount_100"><span>$100</span></label>
         <br><br>
         <label for="donation_amount_other">Other $<input type="text" placeholder="0.00" class="text" name="donation[amount]" id="donation_amount_other"></label>
+        <button type="submit" onclick="cl">Submit</button>
     </div>
     <div class="page2">
       <p>

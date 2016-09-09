@@ -6,7 +6,7 @@
 }
 .button {
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #F0AD00;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -116,7 +116,6 @@ header{
 }
 .donation{
   font-size: 30px;
-  color: 53B30;
   margin: auto;
   height: 300px;
   visibility:hidden;
