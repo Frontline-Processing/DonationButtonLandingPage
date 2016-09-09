@@ -1,14 +1,16 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script>
 function buttonShowForm(){
       document.getElementById("donation").style.visibility="visible";
@@ -27,7 +29,24 @@ function colorCell(page){
       x[0].style.backgroundColor = "#1d3665";
     }
 }
+function updateData(amount) {
+            // function below will run clear.php?h=michael
+            $.ajax({
+                type: "GET",
+                url: "database.php" ,
+                data: { h: amount },
+                success : function() {
+
+                    // here is the code that will run on client side after running clear.php on server
+
+                    // function below reloads current page
+                    location.reload();
+
+                }
+            });
+        }
 </script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body class="container">
 <header id="banner">
@@ -55,6 +74,8 @@ function colorCell(page){
   
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
 
+    <div class="container-fluid">
+
       <div class="page1" id="page1">
 
         <input type="hidden" name="key_id" value="7251153" />
@@ -71,6 +92,7 @@ function colorCell(page){
                 <input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5">
                 <span class="pull-left">$5</span>
               </label>
+
           </div>
           
           <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
@@ -87,6 +109,7 @@ function colorCell(page){
             </label>
           </div>
         </div>
+
 
         
         <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
@@ -126,17 +149,16 @@ function colorCell(page){
         </div>
 
         <div style="clear:both"></div>
-
         <br/>
         <div class="center-block text-center">
           <input type="submit" name="submit" value="Donate Now!" class="button"/>
         </div>
-      </div>
-  
+      </div>  
 
-      </div>
+    </div>
 
   </form>
+
 </div>
 <footer>
 </footer>
