@@ -1,7 +1,14 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<!--<link rel="javascript" type="text/js" href="js/main.css">-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 function buttonShowForm(){
       document.getElementById("donation").style.visibility="visible";
@@ -36,29 +43,37 @@ function colorCell(page){
 <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
 <h1 class="bigheader">Support Special Olympics of Montana</h1></center>
 <div class ="main">
-  <div class="buttonPosition">
-    <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
+  <div class="col-xs-12 col-md-12">
+    <center><button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
   </div>
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
+    <center>
       <div class="page1" id="page1">
-        <center><input type="hidden" name="key_id" value="7251153" />
+        <input type="hidden" name="key_id" value="7251153" />
         <input type="hidden" name="action" value="process_variable" />
         <input type="hidden" name="order_description" value="Special Olympics Donation" />
         <input type="hidden" name="language" value="en" />
         <input type="hidden" name="customer_receipt" value="true" />
         <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
         <input type="hidden" name="profile" value="specialolympics" />
-        <label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5"><span>$5</span></label>
-        <label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10"><span>$10</span></label>
-        <label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15"><span>$15</span></label>
-        <label for="donation_amount_25" class="radio"><input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25"><span>$25</span></label>
-        <label for="donation_amount_50" class="radio"><input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50"><span>$50</span></label>
-        <label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100"><span>$100</span></label>
-        <label for="donation_amount_other" class="radio"><input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other"><span>Other</span></label>
+      <div class="row center-block">
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5"><span>$5</span></label></div>
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10"><span>$10</span></label></div>
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15"><span>$15</span></label></div>
+      </div>
+      <div class="row center-block">
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_25" class="radio"><input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25"><span>$25</span></label></div>
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_50" class="radio"><input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50"><span>$50</span></label></div>
+        <div class="col-xs-3 col-md-4"><label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100"><span>$100</span></label></div>
+      </div>
+      <div class="row center-block">
+        <div class="col-xs-12 col-md-12"><label for="donation_amount_other" class="radio"><input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other"><span>Other</span></label></div>
+      </div>
         <br><br>
         <br><br>
-        <center><input type="submit" name="submit" value="Donate Today!" class="button" style="padding:10px"/></center>
-        </div>
+        <center><input type="submit" name="submit" value="Donate Now!" class="button" style="padding:10px"/></center>
+      </div>      
+    </center>
     </form>
 </div>
 <footer>
