@@ -29,7 +29,7 @@ function colorCell(page){
 }
 </script>
 </head>
-<body class="content">
+<body class="container">
 <header id="banner">
   <table width="100%" class="headertable"><tr>
     <td><a href="http://www.somt.org/" target=_blank><img src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280" align="left"></a></td>
@@ -38,17 +38,23 @@ function colorCell(page){
   <tr>
   </table>
 </header>
+
 <br><br>
+
 <center>
-<!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
-<h1 class="bigheader">Support Special Olympics of Montana</h1></center>
-<div class ="main">
+  <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
+  <h1 class="bigheader">Support Special Olympics of Montana</h1>
+</center>
+
+<div class ="row-fluid">
   <div class="col-xs-12 col-md-12">
-    <center><button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
+    <center>
+      <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
+    </center>
   </div>
+  
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
 
-    <div class="container-fluid">
       <div class="page1" id="page1">
 
         <input type="hidden" name="key_id" value="7251153" />
@@ -58,39 +64,79 @@ function colorCell(page){
         <input type="hidden" name="customer_receipt" value="true" />
         <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
         <input type="hidden" name="profile" value="specialolympics" />
-      
-      <div class="container">
-
-        <div class="col-xs-12 col-ms-12">
-          <div class="col-xs-3 col-md-4">
-            <label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5"><span class="pull-left">$5</span></label>
+        
+        <div class="row-fluid">
+          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+              <label for="donation_amount_5" class="radio">
+                <input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5">
+                <span class="pull-left">$5</span>
+              </label>
           </div>
-          <div class="col-xs-3 col-md-4"><label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10"><span class="pull-left">$10</span></label>
+          
+          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+            <label for="donation_amount_10" class="radio">
+              <input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10">
+              <span class="pull-left">$10</span>
+            </label>
           </div>
-          <div class="col-xs-3 col-md-4"><label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15"><span class="pull-left">$15</span></label>
+            
+          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+            <label for="donation_amount_15" class="radio">
+              <input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15">
+              <span class="pull-left">$15</span>
+            </label>
           </div>
         </div>
-      </div>
-      
-      <div class="col-xs-12 col-ms-12">
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_25" class="radio"><input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25"><span>$25</span></label></div>
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_50" class="radio"><input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50"><span>$50</span></label></div>
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100"><span>$100</span></label></div>
-      </div>
-      
-      <div class="col-xs-12 col-ms-12">
-        <div class="col-xs-12 col-md-12"><label for="donation_amount_other" class="radio"><input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other"><span>Other</span></label></div>
-      </div
-        
 
-        <br><br>
-        <br><br>
+        
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+            <label for="donation_amount_25" class="radio">
+              <input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25">
+              <span class="pull-left">$25</span>
+            </label>
+        </div>
+
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+          <label for="donation_amount_50" class="radio">
+            <input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50">
+            <span class="pull-left">$50</span>
+          </label>
+        </div>
+        
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+          <label for="donation_amount_100" class="radio">
+            <input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100">
+            <span class="pull-left">$100</span>
+          </label>
+        </div>
+
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+          <label for="donation_amount_other" class="radio">
+            <input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other">
+            <span class="pull-left">Other</span>
+          
+        </div>
+
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+        &nbsp;
+        </div>
+
+        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+        &nbsp;
+        </div>
+
+        <div style="clear:both"></div>
+
+        <br/>
         <div class="center-block text-center">
           <input type="submit" name="submit" value="Donate Now!" class="button"/>
         </div>
-      </div>      
-    </div>
-    </form>
+      </div>
+  
+
+      </div>
+
+  </form>
 </div>
 <footer>
 </footer>

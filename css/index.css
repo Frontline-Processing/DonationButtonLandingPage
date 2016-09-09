@@ -36,8 +36,8 @@
   right: 0;
 }
 .content{
-  padding-left: 16%;
-  padding-right: 16%;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 .bigheader{
   font-size: 65px;
@@ -99,7 +99,7 @@ header{
     color:#fff;
 }
 .donation{
-  font-size: 30px;
+  font-size: 2.0em;
   visibility:collapse;
   color: white;
 }
@@ -108,13 +108,14 @@ header{
   background-color: #D3D3D3;
   position: relative;
 }
+
 [type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px; margin: -1px;
   overflow: hidden;
   padding: 10px;
-  position: absolute;
+  position: relative;
   width: 1px;
 }
 [type="radio"] + span::before {
@@ -132,14 +133,11 @@ header{
   background-color: #BDBDBD;
   box-shadow: 0 0 0 0.25em #000;
 }
+
 .donationAMT{
   font-size: 32px;
 }
-input[type="radio"] {
-    display: block;
-    left: -9999px;
-    position: absolute;
-}
+
 label.radio {
     min-width: 110px;
 }
@@ -147,7 +145,6 @@ label.radio {
     padding-bottom: 0.3em;
 }
 .radio{
-  float: left;
   position: relative;
   padding: 10px;
 }
