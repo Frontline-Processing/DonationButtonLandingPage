@@ -47,8 +47,10 @@ function colorCell(page){
     <center><button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button></center>
   </div>
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
-    <center>
+
+    <div class="container-fluid">
       <div class="page1" id="page1">
+
         <input type="hidden" name="key_id" value="7251153" />
         <input type="hidden" name="action" value="process_variable" />
         <input type="hidden" name="order_description" value="Special Olympics Donation" />
@@ -56,24 +58,38 @@ function colorCell(page){
         <input type="hidden" name="customer_receipt" value="true" />
         <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
         <input type="hidden" name="profile" value="specialolympics" />
-      <div class="row center-block">
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5"><span>$5</span></label></div>
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10"><span>$10</span></label></div>
-        <div class="col-xs-3 col-md-4"><label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15"><span>$15</span></label></div>
+      
+      <div class="container">
+
+        <div class="col-xs-12 col-ms-12">
+          <div class="col-xs-3 col-md-4">
+            <label for="donation_amount_5" class="radio"><input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5"><span class="pull-left">$5</span></label>
+          </div>
+          <div class="col-xs-3 col-md-4"><label for="donation_amount_10" class="radio"><input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10"><span class="pull-left">$10</span></label>
+          </div>
+          <div class="col-xs-3 col-md-4"><label for="donation_amount_15" class="radio"><input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15"><span class="pull-left">$15</span></label>
+          </div>
+        </div>
       </div>
-      <div class="row center-block">
+      
+      <div class="col-xs-12 col-ms-12">
         <div class="col-xs-3 col-md-4"><label for="donation_amount_25" class="radio"><input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25"><span>$25</span></label></div>
         <div class="col-xs-3 col-md-4"><label for="donation_amount_50" class="radio"><input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50"><span>$50</span></label></div>
         <div class="col-xs-3 col-md-4"><label for="donation_amount_100" class="radio"><input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100"><span>$100</span></label></div>
       </div>
-      <div class="row center-block">
+      
+      <div class="col-xs-12 col-ms-12">
         <div class="col-xs-12 col-md-12"><label for="donation_amount_other" class="radio"><input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other"><span>Other</span></label></div>
-      </div>
+      </div
+        
+
         <br><br>
         <br><br>
-        <center><input type="submit" name="submit" value="Donate Now!" class="button" style="padding:10px"/></center>
+        <div class="center-block text-center">
+          <input type="submit" name="submit" value="Donate Now!" class="button"/>
+        </div>
       </div>      
-    </center>
+    </div>
     </form>
 </div>
 <footer>
