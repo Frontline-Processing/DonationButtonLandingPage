@@ -7,10 +7,10 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script>
 function buttonShowForm(){
       document.getElementById("donation").style.visibility="visible";
@@ -45,7 +45,44 @@ function updateData(amount) {
                 }
             });
         }
+
+  $(function() {
+
+    var inputs = ["#fiveInput","#tenInput","#fifteenInput","#twentyFiveInput","#fiftyInput","#hundredInput","#otherInput"];
+
+    var selectedInput = null;
+
+    function toggle() {
+
+      var current = $(this);
+      var itemId = current[0].id;
+
+      console.log("itemId: "+ current[0].id );
+
+      // toggle all other items to "on" if not already "on"
+
+      console.log($(this));
+    }
+
+    function toggleOff(id) {
+      var inputItemChecked = $(id)
+      if(inputItemChecked[0].checked) {
+          $(id).prop('checked', true).change()  
+      }
+    }
+
+    // Add initial change listeners
+    inputs.map(function(item) {
+        $(item).change(toggle)
+    })
+
+
+
+
+
+  })
 </script>
+
 <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body class="container">
@@ -65,7 +102,7 @@ function updateData(amount) {
   <h1 class="bigheader">Support Special Olympics of Montana</h1>
 </center>
 
-<div class ="row-fluid">
+<div class ="container">
   <div class="col-xs-12 col-md-12">
     <center>
       <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
@@ -73,89 +110,74 @@ function updateData(amount) {
   </div>
   
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
-
-    <div class="container-fluid">
+    <input type="hidden" name="key_id" value="7251153" />
+    <input type="hidden" name="action" value="process_variable" />
+    <input type="hidden" name="order_description" value="Special Olympics Donation" />
+    <input type="hidden" name="language" value="en" />
+    <input type="hidden" name="customer_receipt" value="true" />
+    <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
+    <input type="hidden" name="profile" value="specialolympics" />
 
       <div class="page1" id="page1">
-
-        <input type="hidden" name="key_id" value="7251153" />
-        <input type="hidden" name="action" value="process_variable" />
-        <input type="hidden" name="order_description" value="Special Olympics Donation" />
-        <input type="hidden" name="language" value="en" />
-        <input type="hidden" name="customer_receipt" value="true" />
-        <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
-        <input type="hidden" name="profile" value="specialolympics" />
         
-        <div class="row-fluid">
-          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-              <label for="donation_amount_5" class="radio">
-                <input type="radio" value="5" class="donationAMT" name="amount" id="donation_amount_5">
-                <span class="pull-left">$5</span>
-              </label>
+        <div class="" style="padding-left:10px;">
+          
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <input id="fiveInput" type="checkbox" checked data-toggle="toggle" data-on="$5.00" data-off="$5.00" data-style="quick">
 
           </div>
           
-          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-            <label for="donation_amount_10" class="radio">
-              <input type="radio" value="10" class="donationAMT" name="amount" id="donation_amount_10">
-              <span class="pull-left">$10</span>
-            </label>
+          <div id="tenInput" class="col-xs-4 col-md-4 col-lg-4">
+            <input type="checkbox" checked data-toggle="toggle" data-on="$10.00" data-off="$10.00" data-style="quick">
           </div>
-            
-          <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-            <label for="donation_amount_15" class="radio">
-              <input type="radio" value="15" class="donationAMT" name="amount" id="donation_amount_15">
-              <span class="pull-left">$15</span>
-            </label>
+
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <input id="fifteenInput" type="checkbox" checked data-toggle="toggle" data-on="$15.00" data-off="$15.00" data-style="quick">
           </div>
+
         </div>
 
-
-        
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-            <label for="donation_amount_25" class="radio">
-              <input type="radio" value="25" class="donationAMT" name="amount" id="donation_amount_25">
-              <span class="pull-left">$25</span>
-            </label>
+        <div style="clear:both">
+          &nbsp;
         </div>
 
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-          <label for="donation_amount_50" class="radio">
-            <input type="radio" value="50" class="donationAMT" name="amount" id="donation_amount_50">
-            <span class="pull-left">$50</span>
-          </label>
-        </div>
-        
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-          <label for="donation_amount_100" class="radio">
-            <input type="radio" value="100" class="donationAMT" name="amount" id="donation_amount_100">
-            <span class="pull-left">$100</span>
-          </label>
-        </div>
-
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-          <label for="donation_amount_other" class="radio">
-            <input type="radio" value="" class="donationAMT" name="amount" id="donation_amount_other">
-            <span class="pull-left">Other</span>
+        <div class="" style="padding-left:10px;">
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <input id="twentyFiveInput" type="checkbox" checked data-toggle="toggle" data-on="$25.00" data-off="$25.00" data-style="quick">
+          </div>
           
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <input id="fiftyInput" type="checkbox" checked data-toggle="toggle" data-on="$50.00" data-off="$50.00" data-style="quick">
+          </div>
+
+          <div class="col-xs-4 col-md-4 col-lg-4">
+            <input id="hundredInput" type="checkbox" checked data-toggle="toggle" data-on="$100.00" data-off="$100.00" data-style="quick">
+          </div>
+
         </div>
 
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
+        <div style="clear:both">
+          &nbsp;
+        </div>
+
+        <div class="" style="padding-left:10px;">
+      
+          <div class="col-xs-12 col-md-12 col-lg-12">
+            <input id="otherInput" type="checkbox" checked data-toggle="toggle" data-on="Other" data-off="Other" data-style="quick">
+            <input id="otherAmount" type="number" defaultValue="$150.00" style="color:#000">
+          </div>
+        </div>
+
+        <div style="clear:both">
         &nbsp;
         </div>
-
-        <div class="col-xs-4 col-md-4 col-lg-4 center-block text-center">
-        &nbsp;
-        </div>
-
-        <div style="clear:both"></div>
-        <br/>
+        
         <div class="center-block text-center">
-          <input type="submit" name="submit" value="Donate Now!" class="button"/>
+          <input type="submit" name="submit" value="Donate Now!" class="button" />
         </div>
+        <br/>
       </div>  
 
-    </div>
 
   </form>
 

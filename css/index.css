@@ -1,16 +1,25 @@
+body{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
 .button {
   border-radius: 4px;
   background-color: #F0AD00;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 23px;
+  font-weight: bold;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin: 0px;
 }
+
 .button + span {
   cursor: pointer;
   display: inline-block;
@@ -39,12 +48,7 @@
   margin-left: 0%;
   margin-right: 0%;
 }
-.bigheader{
-  font-size: 65px;
-  margin-top: 10%;
-  position:relative;
-  color: white;
-}
+
 P.maintitle{
   font-size: 20px;
 }
@@ -76,12 +80,22 @@ input{
     z-index: -1;
     padding: 1%;
 }
+
 .headertable {
   text-align: center;
 }
+
 header{
   position: absolute;
 }
+
+.bigheader{
+  font-size: 4em;
+  margin-top: 10%;
+  position:relative;
+  color: white;
+}
+
 .left-right {
     overflow:hidden;
     height:200px;
@@ -103,10 +117,16 @@ header{
   visibility:collapse;
   color: white;
 }
+
 .page1{
   font-weight: 300;
   background-color: #D3D3D3;
   position: relative;
+  max-width: 400px; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding-top: -10px;
 }
 
 [type="radio"] {
@@ -118,6 +138,7 @@ header{
   position: relative;
   width: 1px;
 }
+
 [type="radio"] + span::before {
   content: '';
   display: inline-block;
@@ -129,31 +150,27 @@ header{
   transition: 0.5s ease all;
   background-color: #1D3665;
 }
+
 [type="radio"]:checked + span::before {
   background-color: #BDBDBD;
   box-shadow: 0 0 0 0.25em #000;
 }
 
 .donationAMT{
-  font-size: 32px;
+  font-size: 32px;  
 }
 
 label.radio {
     min-width: 110px;
 }
-.padbottomless {
-    padding-bottom: 0.3em;
-}
-.radio{
-  position: relative;
-  padding: 10px;
-}
+
 .pagetable{
   width: 100%;
   background-color: white;
   text-align: center;
   font-size: 30px;
 }
+
 .endbutton{
   font-size:16px; color:white; line-height: 24px; padding: 5px 15px; border-radius: 3px;background-color: #1d3665;
     background-image: -moz-linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
@@ -161,9 +178,91 @@ label.radio {
     background-image: -webkit-linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
     background-image: linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
 }
-body{
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
+
+.toggle-on.btn {
+  padding-right: 10px;
+}
+
+.toggle-off.btn {
+  padding-left: 14px;
+}
+
+.toggle-handle {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+  width: 0;
+  border-width: 0 1px;
+  visibility: hidden;
+}
+
+.toggle-on {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.toggle-off {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.quick .toggle-group { 
+  transition: none; -webkit-transition: none; 
+}
+
+.btn {
+  max-width: 75px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #25487d;
+    border-color: #357ebd;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: #25487d;
+    background-color: #fff;
+    border-color: #adadad;
+}
+
+@media (max-width: 1024px) {
+  .button {
+    width: 200px;
+  }
+  .donation {
+    font-size: 2em;
+  }
+  .bigheader{
+    font-size: 4em;
+    margin-top: 10%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 180px;
+  }
+  .donation {
+    font-size: 1.5em;
+  }
+  .bigheader{
+    font-size: 3em;
+    margin-top: 15%;
+  }
 }
