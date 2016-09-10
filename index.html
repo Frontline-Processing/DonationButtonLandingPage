@@ -67,7 +67,7 @@ function updateData(amount) {
     function toggleOff(id) {
       var inputItemChecked = $(id)
       if(inputItemChecked[0].checked) {
-          $(id).prop('checked', true).change()  
+          $(id).prop('checked', true).change()
       }
     }
 
@@ -108,7 +108,7 @@ function updateData(amount) {
       <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
     </center>
   </div>
-  
+
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php" method="POST">
     <input type="hidden" name="key_id" value="7251153" />
     <input type="hidden" name="action" value="process_variable" />
@@ -119,14 +119,14 @@ function updateData(amount) {
     <input type="hidden" name="profile" value="specialolympics" />
 
       <div class="page1" id="page1">
-        
+
         <div class="" style="padding-left:10px;">
-          
+
           <div class="col-xs-4 col-md-4 col-lg-4">
             <input id="fiveInput" type="checkbox" checked data-toggle="toggle" data-on="$5.00" data-off="$5.00" data-style="quick">
 
           </div>
-          
+
           <div id="tenInput" class="col-xs-4 col-md-4 col-lg-4">
             <input type="checkbox" checked data-toggle="toggle" data-on="$10.00" data-off="$10.00" data-style="quick">
           </div>
@@ -145,7 +145,7 @@ function updateData(amount) {
           <div class="col-xs-4 col-md-4 col-lg-4">
             <input id="twentyFiveInput" type="checkbox" checked data-toggle="toggle" data-on="$25.00" data-off="$25.00" data-style="quick">
           </div>
-          
+
           <div class="col-xs-4 col-md-4 col-lg-4">
             <input id="fiftyInput" type="checkbox" checked data-toggle="toggle" data-on="$50.00" data-off="$50.00" data-style="quick">
           </div>
@@ -161,7 +161,7 @@ function updateData(amount) {
         </div>
 
         <div class="" style="padding-left:10px;">
-      
+
           <div class="col-xs-12 col-md-12 col-lg-12">
             <input id="otherInput" type="checkbox" checked data-toggle="toggle" data-on="Other" data-off="Other" data-style="quick">
             <input id="otherAmount" type="number" defaultValue="$150.00" style="color:#000">
@@ -171,18 +171,25 @@ function updateData(amount) {
         <div style="clear:both">
         &nbsp;
         </div>
-        
+
         <div class="center-block text-center">
           <input type="submit" name="submit" value="Donate Now!" class="button" />
         </div>
         <br/>
-      </div>  
+      </div>
 
 
   </form>
 
 </div>
 <footer>
+  <div class="container">
+    <div class="row">
+      <div class="ol-xs-4 col-md-4 col-lg-4"></div>
+      <div class="ol-xs-4 col-md-4 col-lg-4"><td><a href="https://paymentportal.us" target=_blank><img src="images/Payment-Portal-Logo.png" alt="PaymentPortal Logo" width="280" align="left"></a></td></div>
+      <div class="ol-xs-4 col-md-4 col-lg-4"></div>
+    </div>
+</div>
 </footer>
 </body>
 </html>
