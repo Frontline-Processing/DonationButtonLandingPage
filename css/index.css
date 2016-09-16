@@ -73,8 +73,6 @@ input{
 #banner {
     top: 0px;
     width: 100%;
-    left:16%;
-    right: 16%;
     height: 10px;
     padding: 1%;
 }
@@ -264,3 +262,9 @@ label.radio {
     margin-top: 15%;
   }
 }
+footer{
+  top:100%
+  width: 100%;
+  height: 10px;
+  padding: 1%;
+  }
