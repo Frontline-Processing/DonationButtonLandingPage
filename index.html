@@ -2,29 +2,19 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<!-- minjs for javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- bootstrap toggle -->
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script>
-var page;
-function colorCell(page){
-    var x = document.getElementById("pagetable").getElementsByTagName("td");
-    if (page == page3){
-      x[2].style.backgroundColor = "#1d3665";
-    }
-    else if (page == page2){
-      x[1].style.backgroundColor = "#1d3665";
-    }
-    else {
-      x[0].style.backgroundColor = "#1d3665";
-    }
-}
 function updateData(amount) {
             // function below will run clear.php?h=michael
             $.ajax({
@@ -76,7 +66,6 @@ function updateData(amount) {
 
 <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-<body class="container">
 <header id="banner">
   <div class="container-fluid">
     <div class="row center">
@@ -86,6 +75,7 @@ function updateData(amount) {
     </div>
   </div>
 </header>
+<body class="container">
 
 <br><br>
 
@@ -171,9 +161,10 @@ function updateData(amount) {
 <footer>
   <div class="container-fluid">
     <div class="row">
+      <div class="ol-xs-2 col-md-4 col-lg-2"></div>
       <div class="ol-xs-4 col-md-4 col-lg-4"><a href="http://andyaustinphoto.com/" target=_blank><img src="images/compassap.png" alt="Andy Austin Photographer Logo" width="280" align="left"></a></div>
       <div class="ol-xs-4 col-md-4 col-lg-4"><a href="https://paymentportal.us" target=_blank><img src="images/Payment-Portal-Logo.png" alt="PaymentPortal Logo" width="280" align="left"></a></div>
-      <div class="ol-xs-4 col-md-4 col-lg-4"></div>
+      <div class="ol-xs-2 col-md-4 col-lg-2"></div>
     </div>
 </div>
 </footer>
