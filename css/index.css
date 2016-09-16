@@ -71,13 +71,11 @@ input{
   font-size: 18px;
 }
 #banner {
-    position:static;
     top: 0px;
-    left: 16%;
-    right: 16%;
     width: 100%;
+    left:16%;
+    right: 16%;
     height: 10px;
-    z-index: -1;
     padding: 1%;
 }
 
