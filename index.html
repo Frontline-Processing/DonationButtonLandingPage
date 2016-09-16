@@ -12,10 +12,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script>
-function buttonShowForm(){
-      document.getElementById("donation").style.visibility="visible";
-      document.getElementById("buttonDonate").style.visibility="hidden";
-    }
 var page;
 function colorCell(page){
     var x = document.getElementById("pagetable").getElementsByTagName("td");
@@ -84,8 +80,8 @@ function updateData(amount) {
 <header id="banner">
   <div class="container-fluid">
     <div class="row center">
-      <div class="col-xs-3 col-md-3 col-lg-3"><a href="http://www.somt.org/" target=_blank><img class="img-responsive" src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280"></a></div>
-      <div class="col-xs-3 col-md-3 col-lg-3"><a href="https://www.frontlineprocessing.com/" target=_blank><img src="images/FrontlineLogo.png" alt="Frontline Logo" width="240" ></a></div>
+      <div class="col-xs-3 col-md-3 col-lg-3"><a href="http://www.somt.org/" target=_blank><img src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280"></a></div>
+      <div class="col-xs-3 col-md-3 col-lg-3"><a href="https://www.frontlineprocessing.com/" target=_blank><img src="images/FrontlineLogo.png" alt="Frontline Logo" width="240"></a></div>
       <div class="col-xs-3 col-md-3 col-lg-3"><a href="http://www.msubobcats.com/" target=_blank><img src="images/bobcatlogo.png" alt="BobcatLogoss" width="195"></a></div>
     </div>
   </div>
@@ -95,15 +91,8 @@ function updateData(amount) {
 
 <center>
   <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
-  <h1 class="bigheader">Support Special Olympics of Montana</h1>
+  <h1 class="bigheader">SUPPORT SPECIAL OLYMPICS OF MONTANA</h1>
 </center>
-
-<div class ="container">
-  <div class="col-xs-12 col-md-12">
-    <center>
-      <button id="buttonDonate" class="button" onclick="buttonShowForm()"><span>Donate</span></button>
-    </center>
-  </div>
 
   <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php?action=show_information&internal_key=e934b2b7c3420885dfcd77b533b9dcad&internal_timestamp=1473536374&tid=d9663940b75c9d627764a2d725c1ae19" method="POST">
     <input type="hidden" name="key_id" value="7251153" />
@@ -176,6 +165,7 @@ function updateData(amount) {
 
 
   </form>
+</div>
 
 </div>
 <footer>

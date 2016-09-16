@@ -7,14 +7,14 @@ body{
 
 .button {
   border-radius: 4px;
-  background-color: #F0AD00;
+  background-color: #25487D;
   border: none;
   color: #FFFFFF;
   text-align: center;
   font-size: 23px;
   font-weight: bold;
-  padding: 20px;
-  width: 200px;
+  padding: 15px;
+  width: 220px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
@@ -110,8 +110,8 @@ header{
 }
 .donation{
   font-size: 2.0em;
-  visibility:collapse;
   color: white;
+  padding: 2px;
 }
 
 .page1{
@@ -122,7 +122,7 @@ header{
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
-  padding-top: -10px;
+  padding: 15px;
 }
 
 [type="radio"] {
@@ -168,7 +168,7 @@ label.radio {
 }
 
 .endbutton{
-  font-size:16px; color:white; line-height: 24px; padding: 5px 15px; border-radius: 3px;background-color: #1d3665;
+  font-size:16px; color:white; line-height: 15px; padding: 2px 7px; border-radius: 3px;background-color: #1d3665;
     background-image: -moz-linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
     background-image: -ms-linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
     background-image: -webkit-linear-gradient(bottom, #1d3665 0%, #1d3665 100%);
