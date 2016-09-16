@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Frontline-Processing/DonationButtonLandingPage#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "saml20": "^0.1.14"
   }
 }

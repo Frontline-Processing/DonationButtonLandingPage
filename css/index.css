@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background9-16-16.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
@@ -122,7 +122,7 @@ header{
   font-weight: 300;
   background-color: #D3D3D3;
   position: relative;
-  max-width: 400px; 
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -157,7 +157,7 @@ header{
 }
 
 .donationAMT{
-  font-size: 32px;  
+  font-size: 32px;
 }
 
 label.radio {
@@ -220,8 +220,8 @@ label.radio {
   border-radius: 0;
 }
 
-.quick .toggle-group { 
-  transition: none; -webkit-transition: none; 
+.quick .toggle-group {
+  transition: none; -webkit-transition: none;
 }
 
 .btn {
