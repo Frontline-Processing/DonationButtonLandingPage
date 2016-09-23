@@ -1,0 +1,10 @@
+{
+    "name":"DonationButtonLandingPage",
+    "main":[
+        "./public/css/style.css",
+        "./public/js/site.js"
+    ],
+    "dependencies":{
+        "bootstrap":"~2.2.2"
+    }
+}

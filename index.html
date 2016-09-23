@@ -1,26 +1,29 @@
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- minjs for javascript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- bootstrap toggle -->
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-<script>
-function updateData(amount) {
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- minjs for javascript -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- bootstrap toggle -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script>
+        function updateData(amount) {
             // function below will run clear.php?h=michael
             $.ajax({
                 type: "GET",
-                url: "database.php" ,
-                data: { h: amount },
-                success : function() {
+                url: "database.php",
+                data: {
+                    h: amount
+                },
+                success: function() {
 
                     // here is the code that will run on client side after running clear.php on server
 
@@ -31,141 +34,154 @@ function updateData(amount) {
             });
         }
 
-  $(function() {
+        $(function() {
 
-    var inputs = ["#fiveInput","#tenInput","#fifteenInput","#twentyFiveInput","#fiftyInput","#hundredInput","#otherInput"];
+            var inputs = ["#fiveInput", "#tenInput", "#fifteenInput", "#twentyFiveInput", "#fiftyInput", "#hundredInput", "#otherInput"];
 
-    var selectedInput = null;
+            var selectedInput = null;
 
-    function toggle() {
+            function toggle() {
 
-      var current = $(this);
-      var itemId = current[0].id;
+                var current = $(this);
+                var itemId = current[0].id;
 
-      console.log("itemId: "+ current[0].id );
+                console.log("itemId: " + current[0].id);
 
-      // toggle all other items to "on" if not already "on"
+                // toggle all other items to "on" if not already "on"
 
-      console.log($(this));
-    }
+                console.log($(this));
+            }
 
-    function toggleOff(id) {
-      var inputItemChecked = $(id)
-      if(inputItemChecked[0].checked) {
-          $(id).prop('checked', true).change()
-      }
-    }
+            function toggleOff(id) {
+                var inputItemChecked = $(id)
+                if (inputItemChecked[0].checked) {
+                    $(id).prop('checked', true).change()
+                }
+            }
 
-    // Add initial change listeners
-    inputs.map(function(item) {
-        $(item).change(toggle)
-    })
-  })
-</script>
+            // Add initial change listeners
+            inputs.map(function(item) {
+                $(item).change(toggle)
+            })
+        })
+    </script>
 
-<link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
-  <header id="banner">
-    <div class="container-fluid">
-      <div class="row center">
-        <div class="col-md-2 col-lg-2"></div>
-        <div class="col-xs-3 col-md-3 col-lg-3"><a href="http://www.somt.org/" target=_blank><img class="img-responsive" src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280"></a></div>
-        <div class="col-xs-3 col-md-3 col-lg-3"><a href="https://www.frontlineprocessing.com/" target=_blank><img class="img-responsive" src="images/FrontlineLogoWhite.png" alt="Frontline Logo" width="240"></a></div>
-        <div class="col-xs-3 col-md-3 col-lg-3"><a href="http://www.msubobcats.com/" target=_blank><img class="img-responsive" src="images/bobcatlogo.png" alt="BobcatLogoss" width="195"></a></div>
-      </div>
+    <header id="banner">
+        <div class="container-fluid">
+            <div class="row center">
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-xs-3 col-md-3 col-lg-3">
+                    <a href="http://www.somt.org/" target=_blank><img class="img-responsive" src="images/SOMT_logo.png" alt="Special Olympics Logo" width="280"></a>
+                </div>
+                <div class="col-xs-3 col-md-3 col-lg-3">
+                    <a href="https://www.frontlineprocessing.com/" target=_blank><img class="img-responsive" src="images/FrontlineLogoWhite.png" alt="Frontline Logo" width="240"></a>
+                </div>
+                <div class="col-xs-3 col-md-3 col-lg-3">
+                    <a href="http://www.msubobcats.com/" target=_blank><img class="img-responsive" src="images/bobcatlogo.png" alt="BobcatLogoss" width="195"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="container">
+        <br><br>
+        <center>
+            <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
+            <h1 class="bigheader">Support Special Olympics of Montana</h1>
+        </center>
+
+        <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php?action=show_information&internal_key=e934b2b7c3420885dfcd77b533b9dcad&internal_timestamp=1473536374&tid=d9663940b75c9d627764a2d725c1ae19"
+            method="POST">
+            <input type="hidden" name="key_id" value="7251153" />
+            <input type="hidden" name="action" value="process_variable" />
+            <input type="hidden" name="order_description" value="Special Olympics Donation" />
+            <input type="hidden" name="language" value="en" />
+            <input type="hidden" name="customer_receipt" value="true" />
+            <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
+            <input type="hidden" name="profile" value="specialolympics" />
+
+            <div class="page1" id="page1">
+
+                <div class="" style="padding-left:10px;">
+                    <div class="row">
+
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <input id="fiveInput" type="checkbox" checked data-toggle="toggle" data-on="$5.00" data-off="$5.00" data-style="quick">
+
+                        </div>
+
+                        <div id="tenInput" class="col-xs-4 col-md-4 col-lg-4">
+                            <input type="checkbox" checked data-toggle="toggle" data-on="$10.00" data-off="$10.00" data-style="quick">
+                        </div>
+
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <input id="fifteenInput" type="checkbox" checked data-toggle="toggle" data-on="$15.00" data-off="$15.00" data-style="quick">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="clear:both">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    <div class="" style="padding-left:10px;">
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <input id="twentyFiveInput" type="checkbox" checked data-toggle="toggle" data-on="$25.00" data-off="$25.00" data-style="quick">
+                        </div>
+
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <input id="fiftyInput" type="checkbox" checked data-toggle="toggle" data-on="$50.00" data-off="$50.00" data-style="quick">
+                        </div>
+
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <input id="hundredInput" type="checkbox" checked data-toggle="toggle" data-on="$100.00" data-off="$100.00" data-style="quick">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="clear:both">
+                    &nbsp;
+                </div>
+
+                <div class="" style="padding-left:10px;">
+
+                    <div class="col-xs-12 col-md-12 col-lg-12">
+                        <input id="otherInput" type="checkbox" checked data-toggle="toggle" data-on="Other" data-off="Other" data-style="quick">
+                        <input id="otherAmount" type="number" defaultValue="$150.00" style="color:#000">
+                    </div>
+                </div>
+
+                <div style="clear:both">
+                    &nbsp;
+                </div>
+
+                <div class="center-block text-center">
+                    <input type="submit" name="submit" value="Donate Now!" class="button" />
+                </div>
+                <br/>
+            </div>
+        </form>
     </div>
-  </header>
-  <div class="container" id="container">
-  <br><br>
-  <center>
-    <!--<img src="http://www.specialolympics.org/images/so-logo_white.png" alt="Special Olympics Logo">-->
-    <h1 class="bigheader">Support Special Olympics of Montana</h1>
-  </center>
 
-  <form class="donation" name="donationAMT" id="donation" action="https://secure.frontlineprocessinggateway.com/cart/cart.php?action=show_information&internal_key=e934b2b7c3420885dfcd77b533b9dcad&internal_timestamp=1473536374&tid=d9663940b75c9d627764a2d725c1ae19" method="POST">
-    <input type="hidden" name="key_id" value="7251153" />
-    <input type="hidden" name="action" value="process_variable" />
-    <input type="hidden" name="order_description" value="Special Olympics Donation" />
-    <input type="hidden" name="language" value="en" />
-    <input type="hidden" name="customer_receipt" value="true" />
-    <input type="hidden" name="hash" value="action|order_description|7b7d737b374f20499e57987427b15ef0" />
-    <input type="hidden" name="profile" value="specialolympics" />
-
-      <div class="page1" id="page1">
-
-        <div class="" style="padding-left:10px;">
-          <div class="row">
-
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <input id="fiveInput" type="checkbox" checked data-toggle="toggle" data-on="$5.00" data-off="$5.00" data-style="quick">
-
-          </div>
-
-          <div id="tenInput" class="col-xs-4 col-md-4 col-lg-4">
-            <input type="checkbox" checked data-toggle="toggle" data-on="$10.00" data-off="$10.00" data-style="quick">
-          </div>
-
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <input id="fifteenInput" type="checkbox" checked data-toggle="toggle" data-on="$15.00" data-off="$15.00" data-style="quick">
-          </div>
-        </div>
-        </div>
-
-        <div style="clear:both">
-          &nbsp;
-        </div>
-        <div class="row">
-        <div class="" style="padding-left:10px;">
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <input id="twentyFiveInput" type="checkbox" checked data-toggle="toggle" data-on="$25.00" data-off="$25.00" data-style="quick">
-          </div>
-
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <input id="fiftyInput" type="checkbox" checked data-toggle="toggle" data-on="$50.00" data-off="$50.00" data-style="quick">
-          </div>
-
-          <div class="col-xs-4 col-md-4 col-lg-4">
-            <input id="hundredInput" type="checkbox" checked data-toggle="toggle" data-on="$100.00" data-off="$100.00" data-style="quick">
-          </div>
-        </div>
-        </div>
-
-        <div style="clear:both">
-          &nbsp;
-        </div>
-
-        <div class="" style="padding-left:10px;">
-
-          <div class="col-xs-12 col-md-12 col-lg-12">
-            <input id="otherInput" type="checkbox" checked data-toggle="toggle" data-on="Other" data-off="Other" data-style="quick">
-            <input id="otherAmount" type="number" defaultValue="$150.00" style="color:#000">
-          </div>
-        </div>
-
-        <div style="clear:both">
-        &nbsp;
-        </div>
-
-        <div class="center-block text-center">
-          <input type="submit" name="submit" value="Donate Now!" class="button" />
-        </div>
-        <br/>
-      </div>
-  </form>
-  </div>
-
-  </div>
-  </div>
-</div>
+    </div>
+    </div>
+    </div>
 </body>
 <footer class="footer">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-2 col-md-2 col-lg-2"></div>
-      <div class="col-xs-4 col-md-4 col-lg-4"><a href="http://andyaustinphoto.com/" target=_blank><img class="img-responsive" src="images/compassap.png" alt="Andy Austin Photographer Logo" width="140" align="left"></a></div>
-      <div class="col-xs-4 col-md-4 col-lg-4"><a href="https://paymentportal.us" target=_blank><img class="img-responsive" src="images/Payment-Portal-Logo.png" alt="PaymentPortal Logo" width="80" align="left"></a></div>
-      <div class="col-xs-2 col-md-2 col-lg-2"></div>
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+                <a href="http://andyaustinphoto.com/" target=_blank><img class="img-responsive" src="images/compassap.png" alt="Andy Austin Photographer Logo" width="140" align="left"></a>
+            </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+                <a href="https://paymentportal.us" target=_blank><img class="img-responsive" src="images/Payment-Portal-Logo.png" alt="PaymentPortal Logo" width="80" align="left"></a>
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2"></div>
+        </div>
 </footer>
+
 </html>

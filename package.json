@@ -1,26 +1,47 @@
 {
-  "name": "catsgive",
-  "version": "1.0.0",
-  "description": "Donation website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "DonationButtonLandingPage",
+  "description": "Donation landing page for catsgive.com",
+  "version": "0.2.0",
+  "homepage": "https://github.com/Frontline-Processing/DonationButtonLandingPage",
+  "author": {
+    "name": "William Paddock",
+    "email": "wjp@frontlineprocessing.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Frontline-Processing/DonationButtonLandingPage.git"
+    "url": "git://github.com/Frontline-Processing/DonationButtonLandingPage.git"
   },
-  "author": "Frontline Processing Engineering",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Frontline-Processing/DonationButtonLandingPage/issues"
   },
-  "homepage": "https://github.com/Frontline-Processing/DonationButtonLandingPage#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Frontline-Processing/DonationButtonLandingPage/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/DonationButtonLandingPage",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
   "dependencies": {
-    "express": "^4.14.0",
-    "saml20": "^0.1.14"
+    "connect-cachify": "*",
+    "winston": "*",
+    "winston-request-logger": "*",
+    "jade": "*",
+    "nconf": "*",
+    "express": "*",
+    "uglify-js": "*",
+    "uglifycss": "*"
   },
   "devDependencies": {
-    "apache-server-configs": "^2.14.0"
-  }
+    "grunt-simple-mocha": "~0.2.0",
+    "mocha": "~1.6.0",
+    "should": "~1.2.0",
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
 }
