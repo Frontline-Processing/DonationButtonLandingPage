@@ -50,16 +50,6 @@ module.exports = function (grunt) {
                     reporter: 'spec'
                 }
             }
-        },
-        uglify:{
-          options:{
-            mangle:false
-          },
-          css:{
-            files:{
-              'css/output.min.css':['css/*.css']
-            }
-          }
         }
     });
 

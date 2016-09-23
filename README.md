@@ -1,45 +1,57 @@
 # DonationButtonLandingPage
 
-Donation landing page for catsgive.com
-
-These project include:
-
-* [connect-cachify](https://github.com/mozilla/connect-cachify)
-* [twitter bootstrap](http://twitter.github.com/bootstrap/)
-* [JQuery](http://jquery.com/)
-* [bower](http://twitter.github.com/bower/)
-* [jade](http://jade-lang.com/)
-* [winston-request-logger](https://github.com/wolfeidau/winston-request-logger)
-
+Donation page for catsgive.com integrated with grunt
 
 ## Getting Started
+### On the server
+Install the module with: `npm install DonationButtonLandingPage`
 
-Once created you can set up your web application project by running the following commands.
-
-* Firstly run npm to install modules.
-
-```
-npm install
-```
-
-* Run bower to install UI dependencies.
-
-```
-bower install
+```javascript
+var DonationButtonLandingPage = require('DonationButtonLandingPage');
+DonationButtonLandingPage.awesome(); // "awesome"
 ```
 
-* Start the application.
+### In the browser
+Download the [production version][min] or the [development version][max].
 
+[min]: https://raw.github.com/Frontline-Processing/DonationButtonLandingPage/master/dist/DonationButtonLandingPage.min.js
+[max]: https://raw.github.com/Frontline-Processing/DonationButtonLandingPage/master/dist/DonationButtonLandingPage.js
+
+In your web page:
+
+```html
+<script src="dist/DonationButtonLandingPage.min.js"></script>
+<script>
+awesome(); // "awesome"
+</script>
 ```
-node app.js
+
+In your code, you can attach DonationButtonLandingPage's methods to any object.
+
+```html
+<script>
+var exports = Bocoup.utils;
+</script>
+<script src="dist/DonationButtonLandingPage.min.js"></script>
+<script>
+Bocoup.utils.awesome(); // "awesome"
+</script>
 ```
+
+## Documentation
+_(Coming soon)_
+
+## Examples
+_(Coming soon)_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+_Also, please don't edit files in the "dist" subdirectory as they are generated via Grunt. You'll find source code in the "lib" subdirectory!_
 
 ## Release History
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2016 William Paddock
+Copyright (c) 2016 William Paddock  
 Licensed under the MIT license.
