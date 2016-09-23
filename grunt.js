@@ -50,10 +50,22 @@ module.exports = function (grunt) {
                     reporter: 'spec'
                 }
             }
+        },
+        uglify:{
+          options:{
+            mangle:false
+          },
+          css:{
+            files:{
+              'css/output.min.css':['css/*.css']
+            }
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-simple-mocha');
+    // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task.
     grunt.registerTask('default', 'simplemocha');
@@ -61,10 +73,7 @@ module.exports = function (grunt) {
     // override the default test target
     grunt.registerTask('test', 'simplemocha');
 
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', 'uglify');
 
 };
